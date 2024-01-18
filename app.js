@@ -1,14 +1,9 @@
-// CommonJS, every file is a module (by default)
-// Modules - Encapsulated code (only share the minimum)
-const secret = 'SUPER SECRET';
+const _ = require('lodash');
 
-const john = 'john';
-const peter = 'peter';
+// Use the flattenDeep method from loadash dependency
 
-const sayHi = (name) => {
-    console.log(`Hello there ${name}`);
-}
+const items = [1, [2, [3, [4]]]]
 
-sayHi('susan');
-sayHi(john);
-sayHi(peter);
+const newItems = _.flattenDeep(items);
+
+console.log(newItems);
